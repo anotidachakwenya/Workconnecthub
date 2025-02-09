@@ -25,16 +25,17 @@
         /* Basic styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #f8f9fa;
+            background: linear-gradient(to bottom right, #007bff, #00c6ff);
             margin: 0;
             padding: 0;
-            color: #333;
+            color: #fff;
         }
 
         header {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 10px 0;
             color: #fff;
+            text-align: center;
         }
 
         nav ul {
@@ -57,13 +58,22 @@
         }
 
         nav ul li a:hover {
-            color: #007bff;
+            color: #00c6ff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 90%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            animation: fadeIn 1s ease;
         }
 
         section {
             padding: 50px 20px;
             text-align: center;
-            animation: fadeIn 1s ease;
         }
 
         h1, h2 {
@@ -78,14 +88,14 @@
             color: #fff;
             background-color: #007bff;
             border: none;
-            border-radius: 5px;
+            border-radius: 10px;
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         button:hover, .btn:hover {
-            background-color: #0056b3;
+            background-color: #00c6ff;
         }
 
         .product-grid {
@@ -95,14 +105,19 @@
         }
 
         .product-card {
-            background-color: #fff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             width: 30%;
             margin: 20px 0;
             padding: 20px;
             border-radius: 10px;
             text-align: left;
             animation: slideIn 1s ease;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
         }
 
         .product-card h3 {
@@ -111,6 +126,11 @@
 
         .product-card p {
             margin-bottom: 15px;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 5px;
         }
 
         form input, form textarea {
@@ -126,7 +146,7 @@
         }
 
         footer {
-            background-color: #333;
+            background-color: rgba(0, 0, 0, 0.7);
             padding: 20px;
             color: #fff;
             text-align: center;
@@ -146,13 +166,13 @@
         }
 
         footer .social-icons a:hover {
-            color: #007bff;
+            color: #00c6ff;
         }
 
         .marquee {
             width: 100%;
             overflow: hidden;
-            background-color: #007bff;
+            background-color: #00c6ff;
             color: #fff;
             padding: 10px 0;
             position: relative;
@@ -185,23 +205,67 @@
         <span>Welcome to Streemx Tech! Enjoy our latest technology products and offers!</span>
     </div>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <h1>Welcome to Streemx Tech</h1>
-        <p>Your one-stop shop for all your technology needs</p>
-        <button onclick="location.href='#products'" class="btn">Explore Our Products</button>
-    </section>
+    <div class="container">
+        <!-- Hero Section -->
+        <section id="home">
+            <h1>Welcome to Streemx Tech</h1>
+            <p>Your one-stop shop for all your technology needs</p>
+            <button onclick="location.href='#products'" class="btn">Explore Our Products</button>
+        </section>
 
-    <!-- Products Section -->
-    <section id="products">
-        <h2>Our Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <h3>Smartphones</h3>
-                <img src="smartphone.jpg" alt="Smartphones" style="width: 100%; border-radius: 5px;">
-                <p>Latest smartphones from top brands</p>
-                <button class="btn">View More</button>
-            </div>
-            <div class="product-card">
-                <h3>Laptops</h3>
-                <img src="laptop
+        <!-- Products Section -->
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <!-- Laptops -->
+                <div class="product-card">
+                    <h3>Apple MacBook Air</h3>
+                    <img src="macbook-air.jpg" alt="Apple MacBook Air">
+                    <p>Lightweight and powerful with M1 chip.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>Dell XPS 13</h3>
+                    <img src="dell-xps-13.jpg" alt="Dell XPS 13">
+                    <p>High-performance laptop with stunning display.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>HP Spectre x360</h3>
+                    <img src="hp-spectre-x360.jpg" alt="HP Spectre x360">
+                    <p>Versatile 2-in-1 with excellent battery life.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>Lenovo ThinkPad X1 Carbon</h3>
+                    <img src="thinkpad-x1-carbon.jpg" alt="Lenovo ThinkPad X1 Carbon">
+                    <p>Business laptop with robust build quality.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>Asus ZenBook 14</h3>
+                    <img src="asus-zenbook-14.jpg" alt="Asus ZenBook 14">
+                    <p>Sleek design with powerful performance.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>Acer Swift 3</h3>
+                    <img src="acer-swift-3.jpg" alt="Acer Swift 3">
+                    <p>Affordable ultrabook with great features.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>Microsoft Surface Laptop 4</h3>
+                    <img src="surface-laptop-4.jpg" alt="Microsoft Surface Laptop 4">
+                    <p>Premium laptop with excellent touch screen.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>Razer Blade 15</h3>
+                    <img src="razer-blade-15.jpg" alt="Razer Blade 15">
+                    <p>Gaming laptop with top-tier performance.</p>
+                    <button class="btn">View More</button>
+                </div>
+                <div class="product-card">
+                    <h3>LG Gram 17</h3>
+                    <img src="lg-gram-17.jpg" alt="LG[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/vwkd/code-web/tree/65bce93ff767fb20349f2c3a8f4eaa9b1451d111/content%2Flanguages%2Fhtml%2Flists%2Findex.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/afutseng/MySQL-HBase-SQLBridge/tree/05e9d9b4e8ccef24c91f43270a8cd61df3c3ac61/examples%2Fhbasemyadmin%2Fimport-table.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "2")[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/anandimous/Personal-Website-Nandi/tree/b0542e80fba802a2e67e92e04a270b18a285c2ff/index.php?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "3")
